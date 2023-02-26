@@ -1,0 +1,847 @@
+:root{
+    --pr-color: #fff;
+    --second-color: #0a0a0a;
+    --cubicbz: cubic-bezier(.9,0,.1,1);
+    --fz-big: 60px
+}
+@font-face{
+    font-family: 'Monument Extended';
+    src: url(../fonts/MonumentExtended/MonumentExtended-Ultrabold.otf);
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face{
+    font-family: 'Monument Extended';
+    src: url(../fonts/MonumentExtended/MonumentExtended-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+body{
+   background-color:  var(--pr-color);   
+}
+.wrapp{    
+    width: 100%;
+    position: absolute;
+    height: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+.char{
+    display: inline-block;
+}
+.header{
+    position: relative;
+    display: flex;
+    padding: 0 70px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--second-color);
+	display: -ms-flexbox;
+}
+.header__marq{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header__marq{
+    width: 100%;
+    height: auto;
+    background-color: #171717;
+    overflow: hidden;
+}
+.header__marq-wrapp{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 8px 70px;
+    justify-content: center;
+    align-items: center;
+}
+.header__marq-txt{
+    font-family: 'Monument Extended';
+    font-weight: normal;
+    font-size: 13px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-block;
+    letter-spacing: 25px;
+    padding-right: 55px;
+    margin-right: 40px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+}
+.header__marq-star{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    right: 0;
+}
+.header__marq-star img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.title {
+    position: relative;
+    margin: 0;
+    font-size: 90px;
+    text-align: center;
+    color: var(--pr-color);
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    z-index: 2;
+    font-family: 'Monument Extended';
+}
+.title_paralax {
+    display: inline-block;
+    will-change: transform;
+}
+.title .stroke {
+    display: inline-block; 
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+}
+.header__img {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    right: 100px;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    overflow: hidden;
+}
+.header__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}      
+            /*content*/
+.section-title {
+    font-family: 'Monument Extended';
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    margin-bottom: 60px;
+    line-height: .8;
+    font-size: 60px;
+    text-align: center;
+    color: var(--second-color);
+    text-transform: uppercase;
+}
+.section-title .stroke {
+    color: transparent;
+   
+    -webkit-text-stroke: 2px var(--second-color);
+}
+.section-title__square {
+    position: absolute;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: 2px solid var(--second-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+            /*ABOUT*/
+.about{
+    padding: 30px;
+    height: auto;
+    margin-top: 30px;
+}
+.container-about{
+    width: 80%;
+    height: 100%;
+}
+.col-about{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-about{
+    padding: 60px;
+}
+.about .section-title {
+    text-align: center;
+    margin-top: 30px;
+}
+.about-p{
+    padding-top: 30px;
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--second-color);
+    height: auto;
+}
+.about .textanim__item{
+    overflow: hidden;
+}
+.about .textanim__item-img{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+.about .textanim__item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+            /*BENEFITS*/
+.benefits{
+    padding: 30px;
+    height: auto;
+}
+.container-benefits{
+    width: 80%;
+    padding-top: 20px;
+} 
+.container-row-benefits{
+    padding-top: 50px;
+}
+.benefits__list{
+    padding-top: 30px;
+}
+.benefits__num{
+    display: flex;
+    justify-content: center;
+}
+.benefits__num img{
+    width: 70px;
+}
+.benefits__p{
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--second-color)
+}
+.char{
+    display: inline-block;
+}
+            /*WORK*/
+.work{
+    margin-top: 60px;
+    padding: 30px;
+    height: auto;
+}
+.container-work{
+    width: 80%;
+    height: 100%;
+}
+.work .row{
+    padding-top: 50px;
+}
+.col-work{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.work .textanim__item-img{
+    height: 80%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    overflow: hidden;
+}
+.work .textanim__item-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.work__item-num{
+    position: absolute;
+    display: inline-block;
+    font-size: 70px;
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: bold;
+    color: var(--pr-color);  
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+.work a{
+    text-decoration: none;
+}
+.hover-link {
+    margin-top: 30px;
+    background: none;
+    color: var(--pr-color);
+    background-color: var(--second-color);
+    border: solid 1px var(--second-color);
+    padding: 9px 20px;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+} 
+.hover-link > span {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    pointer-events: none;
+    font-weight: normal;
+    color: var(--pr-color);
+}  
+.hover-link > span > span {
+    display: inline-block;
+    font-weight: normal;
+    color: var(--pr-color);
+}  
+.hover-link > span > span:nth-of-type(1) {
+    transition: 0.4s ease all;
+    color: var(--pr-color);
+}  
+.hover-link > span > span:nth-of-type(2) {
+    transition: 0.4s ease all;
+    transition-delay: 0.07s;
+    color: var(--pr-color);
+}  
+.hover-link > span > span > span {
+    font-weight: normal;
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(200%);
+    color: var(--pr-color);
+}  
+.hover-link:hover > span > span,
+.hover-link:focus > span > span {
+    transform: translateY(-200%);
+    color: var(--pr-color);
+}
+
+            /*SKILLS*/
+.skills{
+    padding: 30px;
+    height: auto;
+    margin-top: 30px;
+}
+.container-skills{
+    width: 80%;
+    margin-top: 20px;
+    height: auto;
+}
+.skills .row{
+    padding-top: 80px;
+}
+.container-img-skills{
+    height: 100%;
+    overflow: hidden;
+}
+.skills__img{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.container-img-skills img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-accordion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion_one_item{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.accordion__item {
+    list-style: none;
+    border-bottom: 1px solid #171717;
+    cursor: pointer;
+    user-select: none;
+}
+.accordion__item + .accordion__item {
+    margin-top: 30px;
+}
+.accordion__header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.accordion__bl{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 12px;
+    border: 2.5px solid #000;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+.accordion__bl::before,
+.accordion__bl::after {
+position: absolute;
+content: "";
+width: 10.33px;
+height: 1.67px;
+top: 50%;
+left: 50%;
+background: #000;
+transform: translate(-50%, -50%);
+border-radius: 2px;
+transition: 0.4s;
+}
+.accordion__bl::after {
+transform: translate(-50%, -50%) rotate(90deg);
+}
+.accordion__item.active .accordion__bl {
+border-color: #899193;
+}
+.accordion__item.active .accordion__bl::before,
+.accordion__item.active .accordion__bl::after {
+background: #899193;
+}
+.accordion__item.active .accordion__bl::after {
+opacity: 0;
+transform: translate(-50%, -50%) rotate(0);
+}
+.accordion__title { 
+    font-size: 28px;
+    font-family: 'Monument Extended';
+    font-weight: bold;
+    color: var(--second-color);
+    line-height: 33.6px;
+}
+.accordion__body {
+display: none;
+padding-top: 15px;
+}
+.accordion__descript {
+    max-width: 95%;
+    width: 100%;
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--second-color);
+}
+.accordion__li {
+position: relative;
+}
+.accordion_one_item .accordion__item:first-child {
+pointer-events: none;
+}
+.accordion_one_item .accordion__item:first-child .accordion__body {
+display: block;
+}      
+@keyframes slide-in {
+    0% {
+      clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    }
+    100% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+            /* CSS para las imágenes */
+.skills img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+} 
+            /* CSS para la clase active2 */
+.active2 img {
+    animation-name: slide-in;
+}
+            /*FORM*/
+.formulario{
+    margin-top: 50px;
+    padding: 30px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.container-formulario{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    padding-top: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formulario label{
+    font-size: 20px;
+    color: var(--second-color);
+    font-weight: bold;
+}
+.formulario input{
+    font-size: 18px;
+    font-weight: normal;
+    height: 40px;
+}
+textarea{
+    height: 100px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.login-box .user-box {
+    position: relative;
+}
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #CD0404;
+    font-size: 12px;
+}
+            /*FORMBTN*/      
+.formulario form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #CD0404;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: none;
+    background-color: none;
+}  
+.formulario button:hover {
+    background: #CD0404;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 1px;
+}  
+.formulario button span {
+    position: absolute;
+    display: block;
+}  
+.formulario button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #CD0404);
+    animation: btn-anim1 1s linear infinite;
+}  
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+}  
+.formulario button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #CD0404);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+}
+.formulario button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #CD0404);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+}
+.formulario button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #CD0404);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+}  
+            /*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: var(--second-color);
+}
+.footer__div{
+    font-size: 70px;
+    letter-spacing: 15px;
+    font-family: 'Monument Extended';
+    font-weight: bold;
+    color: var(--pr-color);
+    width: 100%;
+    text-transform: uppercase;
+}
+.footer__div span{
+    display: inline-block;
+}
+            /*RESPONSIVE*/
+@media only screen and (max-width: 767px){
+    .title{
+        width: 100%;
+    }
+    .title_paralax{
+        width: 100%;
+        font-size: 38px;
+    }
+    .title .stroke{
+        width: 100%;
+        font-size: 45px;
+    }
+    .header{
+        padding: 0 20px;
+    }
+    .header__marq-txt{
+        font-size: 10px;
+        letter-spacing: 6px;
+    }
+    .header__marq-star{
+        width: 20px;
+        height: 16px;
+    }
+    .textanim__item-img{
+        height: 60vh;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .container-about{
+        width: 100%;
+    }
+    .container-benefits{
+        width: 100%;
+    }
+    .container-work{
+        width: 100%;
+    }
+    .container-skills{
+        width: 100%;
+    }
+    .content-about{
+        padding: 0;
+        margin-top: 30px;
+        text-align: left;
+        height: auto;
+    }
+    .about .section-title{
+        margin-top: 30px;
+    }
+    .section-title {
+        font-size: 40px;
+    }
+    .about-p{
+        padding-top: 30px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .accordion__descript{
+        font-size: 13px;
+    }
+    .accordion__title{
+        font-size: 23px;
+    }
+    .accordion_one_item{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .container-img-skills{
+        margin-top: 30px;
+        height: 50vh;
+    }
+    .container-formulario{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    .footer__div{
+        font-size: 25px;
+        letter-spacing: 13px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .title{
+        width: 100%;
+    }
+    .title_paralax{
+        width: 100%;
+        font-size: 65px;
+    }
+    .title .stroke{
+        width: 100%;
+        font-size: 65px;
+    }
+    .header{
+        padding: 0 20px;
+    }
+    .header__marq-txt{
+        font-size: 13px;
+        letter-spacing: 8px;
+    }
+    .header__marq-star{
+        width: 20px;
+        height: 20px;
+    }
+    .textanim__item-img{
+        height: 60vh;
+        width: 100%;
+     
+    }
+    .container-about{
+        width: 100%;
+    }
+    .benefits__list{
+        margin-top: 100px;
+    }
+    .container-benefits{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .container-work{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .skills{
+        margin-top: 130px;
+    }
+    .container-skills{
+        width: 100%;
+    }
+    .content-about{
+        padding: 0;
+        text-align: left;
+        height: auto;
+        margin-top: 100px;
+    }
+    .section-title {
+        font-size: 40px;
+    }
+    .about-p{
+        padding-top: 30px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .accordion__descript{
+        font-size: 13px;
+    }
+    .accordion__title{
+        font-size: 23px;
+    }
+    .accordion_one_item{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .container-img-skills{
+        margin-top: 80px;
+        height: 50vh;
+    }
+    .container-formulario{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    .footer__div{
+        font-size: 40px;
+        letter-spacing: 18px;
+    }
+}
